@@ -1,0 +1,8 @@
+fields:
+  name:
+    label: Thema
+    description: Naam van het thema
+    type: dropdown
+  domain:
+    label: Domein
+    description: Domein waar dit thema bij hoort

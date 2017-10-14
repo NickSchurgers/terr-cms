@@ -137,8 +137,6 @@ Homestead.json
 .rocketeer/
 /public/bootstrap/
 /public/config/
-/public/plugins/
-!/public/plugins/terramania/
 /public/tests/
 /public/CHANGELOG.md
 /public/CONTRIBUTING.md
@@ -157,4 +155,7 @@ Homestead.json
 /public/server.php
 /public/modules/
 !/laradock/.env
-
+/public/plugins/offline/
+/public/plugins/october/
+/public/plugins/vojtasvoboda/
+/public/plugins/rainlab/

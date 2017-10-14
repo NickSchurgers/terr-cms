@@ -1,0 +1,7 @@
+title: Thema's
+list: ~/plugins/terramania/terramania/models/theme/columns.yaml
+modelClass: Terramania\Terramania\Models\Theme
+recordUrl: terramania/terramania/themes/update/:id
+
+toolbar:
+  buttons: list_toolbar

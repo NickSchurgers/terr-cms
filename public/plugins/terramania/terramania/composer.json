@@ -1,0 +1,9 @@
+{
+  "name": "terramania/terramania",
+  "type": "october-plugin",
+  "version": "1.0.0",
+  "require": {
+    "composer/installers": "*",
+    "layershifter/tld-extract": "^1.2"
+  }
+}

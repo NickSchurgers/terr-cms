@@ -1,0 +1,14 @@
+name: Thema
+form: $/terramania/terramania/models/theme/fields.yaml
+modelClass: Terramania\Terramania\Models\Theme
+
+create:
+  title: Nieuw thema
+  redirectClose: terramania/terramania/themes
+  flashSave: Thema succesvol aangemaakt.
+
+update:
+  title: Thema aanpassen
+  redirectClose: terramania/terramania/themes
+  flashSave: Thema succesvol aangepast.
+  flashDelete: Thema verwijderd.
