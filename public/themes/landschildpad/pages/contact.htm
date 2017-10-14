@@ -1,0 +1,53 @@
+title = "contact"
+url = "/contact"
+layout = "default"
+is_hidden = 0
+==
+<?php
+
+function onSend()
+{
+// Collect input
+$name = post('name');
+$email = post('email');
+$msg = post('msg');
+
+// Form Validation
+$validator = Validator::make(
+[
+'name' => $name,
+'email' => $email,
+'msg' => $msg,
+],
+[
+'name' => 'required',
+'email' => 'required|email',
+'msg' => 'required',
+]
+);
+
+if ($validator->fails())
+{
+$messages = $validator->messages();
+throw new ApplicationException($messages->first());
+}
+
+// All is well -- Submit form
+$to = System\Models\MailSetting::get('sender_email');
+$params = compact('name','email','msg');
+Mail::sendTo($to, 'terramania.website::mail.contactform', $params);
+return true;
+}
+?>
+==
+<h1>Contact & Vragen</h1>
+<div class="row">
+    <div id="contactForm" class='small-12 text-center large-text-left columns'>
+        <form data-request="onSend" data-request-update="'contact_success': '#contactForm'">
+            <input type="text" name="name" id="name" placeholder="Naam *"/>
+            <input type="email" name="email" id="email" placeholder="Email *"/>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Bericht *"></textarea>
+            <button type="submit" class="{{this.theme.code}} button" id="sendMail">Verstuur bericht</button>
+        </form>
+    </div>
+</div>

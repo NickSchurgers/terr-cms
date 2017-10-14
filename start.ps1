@@ -1,0 +1,1 @@
+docker-compose up -d mariadb nginx phpmyadmin php-fpm redis workspace ; docker-compose exec --user=laradock workspace bash

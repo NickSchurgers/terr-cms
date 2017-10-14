@@ -1,0 +1,18 @@
+[viewBag]
+snippetCode = "pmb"
+snippetName = "Menu Balk"
+snippetProperties[i][title] = "items"
+snippetProperties[i][type] = "string"
+snippetProperties[i][default] = ""
+snippetProperties[i][options][] = ""
+==
+{%set items = i|split(',') %}
+<div class="row" data-sticky-container>
+    <nav class="columns sticky" data-sticky data-anchor="content" data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="1">
+        <ul class="menu align-center" data-magellan>
+            {% for item in items %}
+            <li><a href="#{{item}}">{{item | capitalize}}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,21 @@
+[viewBag]
+snippetCode = "picture"
+snippetName = "afbeelding"
+snippetProperties[url][title] = "afbeelding_locatie"
+snippetProperties[url][type] = "string"
+snippetProperties[url][default] = ""
+snippetProperties[url][options][] = ""
+snippetProperties[align][title] = "uitlijning"
+snippetProperties[align][type] = "dropdown"
+snippetProperties[align][default] = "align-left"
+snippetProperties[align][options][align-left] = "Links"
+snippetProperties[align][options][align-center] = "Midden"
+snippetProperties[align][options][align-right] = "Rechts"
+==
+<div class="grid-container">
+    <div class="image-wrapper grid-x {{align}}">
+        <div class="image cell full-width shrink">
+            <img src="{{url}}"/>
+        </div>
+    </div>
+</div>

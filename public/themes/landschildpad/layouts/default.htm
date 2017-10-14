@@ -1,0 +1,311 @@
+description = "Default layout"
+
+[staticPage]
+
+[staticMenu tabs]
+code = "tabs"
+
+[staticMenu top]
+code = "top"
+
+[staticMenu footer]
+code = "footer"
+
+[staticMenu menu]
+code = "menu"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{(host() | capitalize)}} - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro" rel="stylesheet">
+    <link href="{{ ['~/themes/assets/node_modules/foundation-sites/dist/css/foundation.min.css','~/themes/assets/scss/app.scss', '~/themes/assets/css/styles.css']|theme }}"
+          rel="stylesheet">
+    <link href="{{ ['/assets/scss/app.scss']|theme }}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{{'assets/images/icon.png' | theme}}"/>
+    {% styles %}
+</head>
+<body>
+<div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas position-left {{this.theme.code}}" id="offCanvas" data-off-canvas>
+            <nav>
+                <!-- OffCanvas Menu site section-->
+                <ul class="menu vertical">
+                    <li class="menu-text">{{host() | capitalize}}</li>
+
+                    <!-- OffCanvas Menu menu replacement links-->
+                    {% for link in menu.menuItems %}
+                    <li>
+                        <a href="{{link.url}}">{{link.title}}</a>
+                        {% if link.items %}
+                        <ul class="nested menu vertical submenu">
+                            {% for sublink in link.items %}
+                            <li class="menu-subitem">
+                                <a class="menu-sublink" href="{{sublink.url}}">{{sublink.title}}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+
+                </ul>
+
+                <!-- OffCanvas Menu general section-->
+                <ul class="menu vertical">
+
+                    <li class="menu-text"></li>
+
+                    <!-- OffCanvas Menu topMenu replacement links-->
+                    {% for link in top.menuItems %}
+                    <li>
+                        <a href="{{link.url}}">{{link.title}}</a>
+                        {% if link.items %}
+                        <ul class="nested menu vertical submenu">
+                            {% for sublink in link.items %}
+                            <li class="menu-subitem">
+                                <a class="menu-sublink" href="{{sublink.url}}">{{sublink.title}}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+
+                    <li class="menu-text"></li>
+
+                    <!-- OffCanvas Menu tab replacement links-->
+                    {% for tab in tabs.menuItems %}
+                    {% if not tab.viewBag.isHidden %}
+                    <li class="tab">
+                        {% if (tab.title|lower) == host() %}
+                        <a class="tab active" href="{{tab.url}}">
+                            <img class="icon" src="{{'assets/images/icon.png' | theme}}">
+                            {{tab.title}}
+                        </a>
+                        {% else %}
+                        <a class="tab" href="{{tab.url}}">
+                            <img class="icon" src="{{('/themes/' ~ (tab.title|lower) ~ '/assets/images/icon.png')}}">
+                            {{tab.title}}
+                        </a>
+                        {% endif %}
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+
+            </nav>
+        </div>
+
+        <!-- Navigation bars-->
+        <div class="off-canvas-content" data-off-canvas-content>
+            <nav>
+                <!-- Small menu bar-->
+
+                <div id="menu-small" class="title-bar {{this.theme.code}} hide-for-medium">
+                    <div class="grid-x grid-padding-x align-middle" style="width:100%;">
+                        <div class="small-6 cell">
+                            <span class="title-small">{{(fullHost() | capitalize)}}</span>
+                        </div>
+                        <div class="small-6 cell text-right">
+                            <button class="menu-icon" type="button" data-open="offCanvas"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="title-bar show-for-medium">
+                    <div class="title-bar-right">
+                        <ul class="menu align-center show-for-medium icon-top">
+                            {% for tab in tabs.menuItems %}
+                            {% if not tab.viewBag.isHidden %}
+                            <li>
+                                {% if (tab.title|lower) == host() %}
+                                <a class="tab active" href="{{tab.url}}">
+                                    <img src="{{'assets/images/icon.png' | theme}}" />
+                                    <span>{{tab.title}}</span>
+                                </a>
+                                {% else %}
+                                <a class="tab" href="{{tab.url}}">
+                                    <img src="{{('/themes/' ~ (tab.title|lower) ~ '/assets/images/icon.png')}}" />
+                                    <span>{{tab.title}}</span>
+                                </a>
+                                {% endif %}
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TopMenu -->
+                <div class="grid-container">
+                    <div id="top-menu" class="grid-x show-for-medium align-middle">
+                        <div class="cell shrink">
+                            <div id="logo">
+                                <img src="{{('assets/images/logo.png') | theme}}">{{host()|capitalize}}
+                            </div>
+                        </div>
+                        <div class="cell auto">
+                            <ul class="menu dropdown align-right" data-dropdown-menu>
+
+                                <!-- TopMenu links-->
+                                {% for link in top.menuItems %}
+                                <li>
+                                    <a href="{{link.url}}" class="{{link.viewBag.cssClass}}">
+                                        {% if link.viewBag.cssClass == 'webshop-button' %}
+                                        <i class="fa fa-shopping-bag"></i>
+                                        {% endif %}
+                                        {{link.title}}
+                                    </a>
+                                    {% if link.items %}
+                                    <ul class="menu submenu">
+                                        {% for sublink in link.items %}
+                                        <li class="menu-subitem"><a class="menu-sublink" href="{{sublink.url}}">{{sublink.title}}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                </li>
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <div id="menu" class="grid-x full-width {{this.theme.code}} show-for-medium">
+                    <div class="cell">
+                        <ul class="dropdown menu align-center" data-dropdown-menu>
+
+                            <!-- Menu Links-->
+                            {% for link in menu.menuItems %}
+                            <li class="menu-item">
+                                <a class="menu-link" href="{{link.url}}">{{link.title}}</a>
+                                {% if link.items %}
+                                <ul class="menu submenu">
+                                    {% for sublink in link.items %}
+                                    <li class="menu-subitem"><a class="menu-sublink" href="{{sublink.url}}">{{sublink.title}}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+
+                            <!-- Search box-->
+                            <li class="search">
+                                <form id="search" action="{{ '/zoek' | app }}" method="get">
+                                    <div class="grid-x grid-padding-x">
+                                        <div class="medium-12 cell align-self-middle">
+                                            <div class="input-group">
+                                                <span class="input-group-label">
+                                                    <i class="fa fa-search" aria-hidden="true"></i></span>
+                                                <input class="input-group-field" name="q" type="text" autocomplete="off"
+                                                       placeholder="Zoek">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Header-->
+            {%if this.page.url == "/" %}
+            <header>
+                <div class="grid-x grid-padding-x full-width">
+                    <div class="cell small-12 show-for-large header-img text-center"
+                         style="background: url({{'assets/images/header.jpg' | theme}}) no-repeat center center;"></div>
+                    <div class="cell small-12 show-for-medium-only header-img"
+                         style="background: url({{'assets/images/header_medium.jpg' | theme}}) no-repeat center center;"></div>
+                    <div class="cell small-12 show-for-small-only header-img"
+                         style="background: url({{'assets/images/header_small.jpg' | theme}}) no-repeat center center;"></div>
+                </div>
+            </header>
+            {% endif %}
+
+            <!-- Main Content -->
+            <main class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div id="content" class="cell small-12">
+                        {% page %}
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer-->
+            <footer>
+                <div id="content-footer" class="grid-x grid-padding-x align-middle collapse">
+                    <div class="cell small-12 large-2 text-center large-text-left small-order-2 large-order-1">
+                        © {{(host() | capitalize)}} {{'now' | date('Y')}}
+                    </div>
+                    <div class="cell auto show-for-medium large-order-2">
+                        <ul class="menu align-center" data-dropdown-menu>
+                            {% for link in footer.menuItems %}
+                            <li><a href="{{link.url}}">{{link.title}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="cell small-12 large-2 social text-center large-text-right small-order-1 large-order-3">
+                        <a href="http://www.facebook.com/waterschildpad">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+                        <a href="/contact">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
+    </div>
+</div>
+</body>
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style show-for-medium"
+     style="right:0; bottom:0;">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_whatsapp"></a>
+</div>
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style hide-for-medium"
+     style="right:0; bottom:0;">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_whatsapp"></a>
+</div>
+<script>
+    var a2a_config = a2a_config || {};
+    a2a_config.locale = "nl";
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<script async src="https://use.fontawesome.com/a5fd862837.js"></script>
+<!-- AddToAny END -->
+
+<script src="{{ [
+    '~/themes/assets/node_modules/jquery/dist/jquery.min.js',
+    '~/themes/assets/node_modules/what-input/dist/what-input.min.js',
+    '~/themes/assets/node_modules/foundation-sites/dist/js/foundation.min.js',
+    '~/themes/assets/js/foundation.js'
+    ]| theme}}"></script>
+
+<script>
+    $(document).foundation();
+</script>
+{% scripts %}
+{% framework extras %}
+</html>

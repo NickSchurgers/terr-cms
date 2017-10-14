@@ -1,0 +1,115 @@
+[viewBag]
+snippetCode = "sd"
+snippetName = "Soorten - Detail"
+snippetProperties[img][title] = "afbeelding"
+snippetProperties[img][type] = "string"
+snippetProperties[img][default] = ""
+snippetProperties[img][options][] = ""
+snippetProperties[name][title] = "naam"
+snippetProperties[name][type] = "string"
+snippetProperties[name][default] = ""
+snippetProperties[name][options][] = ""
+snippetProperties[subname][title] = "subnaam"
+snippetProperties[subname][type] = "string"
+snippetProperties[subname][default] = ""
+snippetProperties[subname][options][] = ""
+snippetProperties[nlname][title] = "nlnaam"
+snippetProperties[nlname][type] = "string"
+snippetProperties[nlname][default] = ""
+snippetProperties[nlname][options][] = ""
+snippetProperties[size][title] = "grootte"
+snippetProperties[size][type] = "string"
+snippetProperties[size][default] = ""
+snippetProperties[size][options][] = ""
+snippetProperties[region][title] = "verspreiding"
+snippetProperties[region][type] = "string"
+snippetProperties[region][default] = ""
+snippetProperties[region][options][] = ""
+snippetProperties[habitat][title] = "leefomgeving"
+snippetProperties[habitat][type] = "string"
+snippetProperties[habitat][default] = ""
+snippetProperties[habitat][options][] = ""
+snippetProperties[behavior][title] = "gedrag"
+snippetProperties[behavior][type] = "string"
+snippetProperties[behavior][default] = ""
+snippetProperties[behavior][options][] = ""
+snippetProperties[food][title] = "eten"
+snippetProperties[food][type] = "string"
+snippetProperties[food][default] = ""
+snippetProperties[food][options][] = ""
+snippetProperties[hibernation][title] = "winterslaap"
+snippetProperties[hibernation][type] = "string"
+snippetProperties[hibernation][default] = ""
+snippetProperties[hibernation][options][] = ""
+snippetProperties[features][title] = "kenmerken"
+snippetProperties[features][type] = "string"
+snippetProperties[features][default] = ""
+snippetProperties[features][options][] = ""
+snippetProperties[temps][title] = "temperatuur"
+snippetProperties[temps][type] = "string"
+snippetProperties[temps][default] = ""
+snippetProperties[temps][options][] = ""
+snippetProperties[additional][title] = "bijzonderheden"
+snippetProperties[additional][type] = "string"
+snippetProperties[additional][default] = ""
+snippetProperties[additional][options][] = ""
+==
+<article class="species">
+    <div class="grid-x species-top">
+        <div class="cell small-12 medium-6">
+            <img src="{{img}}">
+        </div>
+        <div class="cell small-12 medium-6">
+            <div class="species-header">
+                <h4 class="name">{{name}}</h4>
+                <p>
+                    <span class="subname">{{subname}}</span>
+                </p>
+            </div>
+            <div class="nl-name">
+                <span class="bold">Nederlandse naam:</span>
+                <p>{{nlname}}</p>
+            </div>
+            <div class="size">
+                <span class="bold">Grootte:</span>
+                <p>{{size}}</p>
+            </div>
+            <div class="temps">
+                <span class="bold">Temperatuur:</span>
+                <p>{{temps}}</p>
+            </div>
+            <div class="region">
+                <span class="bold">Verspreiding:</span>
+                <p>{{region}}</p>
+            </div>
+            <div class="habitat">
+                <span class="bold">Leefomgeving:</span>
+                <p>{{habitat}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="grid-x species-bottom">
+        <div class="cell">
+            <div class="food">
+                <span class="bold">Eten:</span>
+                <p>{{food}}</p>
+            </div>
+            <div class="behavior">
+                <span class="bold">Gedrag:</span>
+                <p>{{behavior}}</p>
+            </div>
+            <div class="hibernation">
+                <span class="bold">Winterslaap:</span>
+                <p>{{hibernation}}</p>
+            </div>
+            <div class="features">
+                <span class="bold">Kenmerken:</span>
+                <p>{{features}}</p>
+            </div>
+            <div class="additional">
+                <span class="bold">Bijzonderheden:</span>
+                <p>{{additional}}</p>
+            </div>
+        </div>
+    </div>
+</article>

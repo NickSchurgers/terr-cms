@@ -1,0 +1,37 @@
+name: tabs
+items:
+    -
+        title: Waterschildpad
+        type: url
+        url: 'http://www.waterschildpad.org'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Moerasschildpad
+        nesting: ''
+        type: url
+        url: 'http://www.moerasschildpad.info'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Landschildpad
+        nesting: ''
+        type: url
+        url: 'http://landschildpad.info'
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

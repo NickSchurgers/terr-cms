@@ -1,0 +1,22 @@
+name: Landschildpad
+description: landschildpad
+author: OctoberCMS
+homepage: 'http://octobercms.com'
+code: 'landschildpad'
+form:
+    fields:
+        code:
+            label: 'Unieke thema code'
+            assetVar: code
+        primary-color:
+            label: 'Primaire Kleur'
+            type: colorpicker
+            assetVar: primary-color
+        secondary-color:
+            label: 'Secundaire Kleur'
+            type: colorpicker
+            assetVar: secondary-color
+        menu-color:
+            label: 'Menu Kleur'
+            type: colorpicker
+            assetVar: menu-color

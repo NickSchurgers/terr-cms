@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/true/punycode/src" isTestSource="false" packagePrefix="TrueBV" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/collections/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins/terramania/ckeditor/vendor/composer/installers/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/cache/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/instantiator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins/terramania/terramania/vendor/composer/installers/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins/rainlab/pages/vendor/composer/installers/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/jakub-onderka/php-console-highlighter/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/fzaninotto/faker/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins/terramania/terramania/vendor/true/punycode/src" isTestSource="false" packagePrefix="TrueBV" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/laravel/framework/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/common/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/collections/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins/rainlab/pages/vendor/composer/installers/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/psy/psysh/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/nikic/php-parser/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/classpreloader/classpreloader/src" isTestSource="false" packagePrefix="ClassPreloader" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins/terramania/ckeditor/vendor/composer/installers/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/annotations/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/phpspec/prophecy/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins/terramania/terramania/vendor/composer/installers/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/jakub-onderka/php-console-color/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/inflector/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/phpspec/prophecy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/mtdowling/cron-expression/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/lexer/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins/offline/sitesearch/vendor/composer/installers/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/instantiator/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/cache/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/monolog/monolog/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/tests/fixtures/plugins" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/modules" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/psy/psysh/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/psr/log" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/jeremeamia/SuperClosure/src" isTestSource="false" packagePrefix="SuperClosure" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/inflector/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/nesbot/carbon/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/monolog/monolog/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/composer/installers/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/doctrine/dbal/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/composer/installers/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/fzaninotto/faker/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/kriswallsmith/assetic/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/public/plugins/offline/sitesearch/vendor/composer/installers/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/public/vendor/nikic/php-parser/test" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/public/plugins/vojtasvoboda/twigextensions/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+          <root url="phar://$MODULE_DIR$/public/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/public/plugins/vojtasvoboda/twigextensions/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+          <root url="phar://$MODULE_DIR$/public/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
